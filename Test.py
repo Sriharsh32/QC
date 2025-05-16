@@ -7,7 +7,6 @@ pdf_path = "disc.pdf"
 output_pdf_path = "GeneratedOutput(PDF).pdf"
 output_excel_path = "GeneratedOutput(XLS).xlsx"
 doc = fitz.open(pdf_path)
-
 # Regex patterns
 dimension_pattern = re.compile(r'(⌀\d+(\.\d+)?|R\d+(\.\d+)?|\d+\.\d+|\b\d+\b)')
 tolerance_pattern = re.compile(r'(±\d+(\.\d+)?|[+−-]\d+(\.\d+)?\s*[+−-]\d+(\.\d+)?)')
@@ -24,9 +23,6 @@ for page_num, page in enumerate(doc, start=1):
 
 # Process dimensions and look for tolerances
 data = []
-
-
-
 for i, (page_num, rect, text) in enumerate(all_blocks):
     dim_matches = dimension_pattern.findall(text)
     if not dim_matches:
