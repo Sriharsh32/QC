@@ -41,7 +41,7 @@ def extract_all_tolerances_to_df(pdf_path):
     return pd.DataFrame(normalized_data, columns=columns)
 
 def main():
-    pdf_path = "disc.pdf"  # Replace with your PDF filename
+    pdf_path = "shaftdraw.pdf"  # Replace with your PDF filename
     output_excel = "extracted_tolerances.xlsx"
 
     df = extract_all_tolerances_to_df(pdf_path)
