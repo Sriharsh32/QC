@@ -1,9 +1,8 @@
 import fitz  # PyMuPDF
 import re
 import pandas as pd
-
 # Input/output files
-pdf_path = "disc.pdf"
+pdf_path = "D:\QC\Drawings\shaftdraw.pdf"
 output_pdf_path = "GeneratedOutput(PDF).pdf"
 output_excel_path = "GeneratedOutput(XLS).xlsx"
 doc = fitz.open(pdf_path)
